@@ -1,0 +1,46 @@
+package com.devsuperior.dsvendas.dto;
+
+import java.io.Serializable;
+
+import com.devsuperior.dsvendas.entities.Seller;
+
+public class SalesSuccessDTO implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
+	private String sellerName;
+	private Long visied;
+	private Long deals;
+	
+	public SalesSuccessDTO() {
+	}
+
+	public SalesSuccessDTO(Seller seller, Long visied, Long deals) {
+		sellerName = seller.getName();
+		this.visied = visied;
+		this.deals = deals;
+	}
+
+	public String getSellerName() {
+		return sellerName;
+	}
+
+	public void setSellerName(String sellerName) {
+		this.sellerName = sellerName;
+	}
+
+	public Long getVisied() {
+		return visied;
+	}
+
+	public void setVisied(Long visied) {
+		this.visied = visied;
+	}
+
+	public Long getDeals() {
+		return deals;
+	}
+
+	public void setDeals(Long deals) {
+		this.deals = deals;
+	}
+}
